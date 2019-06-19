@@ -85,7 +85,7 @@ class Stats:
     """
     Stats calculated by DataCapture.
     """
-    def __init__(self, numbers=None, total_count=None):
+    def __init__(self, numbers, total_count):
         self.numbers = numbers
         self.total_count = total_count
 
@@ -96,8 +96,6 @@ class Stats:
         validate_number(number, self.less)
         if number > MAX_VAL:
             return self.total_count
-        if not self.numbers:
-            return None
         return self.numbers[number][LESS_THAN]
 
     def greater(self, number):
