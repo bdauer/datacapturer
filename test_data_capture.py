@@ -84,10 +84,10 @@ class TestStats(TestCase):
         # test with greater than max value
         self.assertEqual(stats.less(1000), 5)
         self.assertEqual(stats.greater(1000), 0)
-        self.assertEqual(stats.between(4, 1000), 4)
+        self.assertEqual(stats.between(4, 1000), 3)
 
         # make sure validation was called for each passed number
-        self.assertEqual(mock_validation.call_count, 14)
+        self.assertEqual(mock_validation.call_count, 15)
 
 
 if __name__ == '__main__':

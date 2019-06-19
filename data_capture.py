@@ -125,7 +125,7 @@ class Stats:
         )
         numbers = self.numbers
         if high_number > MAX_VAL:
-            return self.total_count - 1
+            return self.total_count - self.less(low_number)
         high_num_dict = numbers[high_number]
         less_than_high_num = high_num_dict[LESS_THAN] + high_num_dict[COUNT]
         less_than_low_num = numbers[low_number][LESS_THAN]
