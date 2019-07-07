@@ -66,11 +66,6 @@ class DataCapture:
         """
         lesser_count = 0
         greater_count = self.total_count
-        self.numbers = OrderedDict(
-            (key, value) for key, value in sorted(
-                self.numbers.items()
-            )
-        )
         for number in self.numbers:
             number_count = self.numbers[number][COUNT]
             self.numbers[number][LESS_THAN] = lesser_count
